@@ -4,5 +4,5 @@ const StudentSchema=new mongoose.Schema({
     email:String,
     password:String
 })
-const StudentModel=mongoose.model('stu_gagx',StudentSchema)
+const StudentModel=mongoose.model('stu_collec',StudentSchema)
 module.exports=StudentModel
