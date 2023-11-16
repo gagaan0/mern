@@ -7,7 +7,7 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://Gagan:gagan@cluster0.r4ncvgy.mongodb.net/product")
+mongoose.connect("mongodb+srv://Username:<password>@clustername.r4ncvgy.mongodb.net/product")
 
 app.post('/register',(req,res)=>{
     StudentModel.create(req.body)
