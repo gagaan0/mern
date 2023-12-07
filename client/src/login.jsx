@@ -3,8 +3,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
-import { toast,ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css'
+
 
 function Login(){
     const [password,setPassword] = useState("")
@@ -16,13 +15,6 @@ function Login(){
         axios.post('http://localhost:3006/log',{password,email})
         .then(result=>
             {
-                console.log(result)
-            if(result.data==='success'){
-                Navigate('/home')
-            }
-            else{
-                toast.error('Login Failed')
-            }
         })
         .catch(err=>console.log(err))
 
@@ -39,8 +31,7 @@ function Login(){
                     <table align="center">
                     <tr>
                         <td><h1>Login</h1></td>
-                   
-                        <td><marquee><h1>Here!</h1></marquee></td>
+                
                         </tr>
                     </table>
                 </div>
@@ -73,6 +64,7 @@ function Login(){
                             <br>
                             </br>
                         <center><button type="submit" className="submit">Login</button></center>
+                     
                 </div>
                     </table>
                 </center></form>
